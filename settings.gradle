@@ -1,0 +1,4 @@
+include ':presentationAndroid'
+include ':domain'
+include ':data'
+include ':server'
