@@ -1,4 +1,4 @@
-package com.alxminyaev.app_for_nstu
+package com.alxminyaev.appfornstu
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

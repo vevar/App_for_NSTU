@@ -1,4 +1,4 @@
-package com.alxminyaev.app_for_nstu.feature.login.vm
+package com.alxminyaev.appfornstu.feature.login.vm
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

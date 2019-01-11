@@ -1,4 +1,4 @@
-package com.alxminyaev.app_for_nstu.feature.login.view
+package com.alxminyaev.appfornstu.feature.login.view
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -6,12 +6,11 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.widget.ProgressBar
 import android.widget.TextView
-import com.alxminyaev.app_for_nstu.feature.BaseActivity
-import com.alxminyaev.app_for_nstu.feature.login.vm.LoginViewModel
-import com.alxminyaev.app_for_nstu.feature.login.vm.LoginViewModelFactory
-import com.alxminyaev.nstuplanner.R
-import com.alxminyaev.nstuplanner.databinding.ActivityLoginBinding
-import com.alxminyaev.nstuplanner.presenter.feature.login.view.LoginView
+import com.alxminyaev.appfornstu.R
+import com.alxminyaev.appfornstu.databinding.ActivityLoginBinding
+import com.alxminyaev.appfornstu.feature.BaseActivity
+import com.alxminyaev.appfornstu.feature.login.vm.LoginViewModel
+import com.alxminyaev.appfornstu.feature.login.vm.LoginViewModelFactory
 
 
 class LoginActivity : BaseActivity<LoginView>(), LoginView {

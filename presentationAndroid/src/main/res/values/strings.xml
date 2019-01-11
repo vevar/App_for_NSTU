@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">NSTU Planner</string>
+    <string name="app_name">NSTU</string>
     <string name="login_text">Login</string>
     <string name="login">Login</string>
     <string name="password">Password</string>
-    <string name="todo">TODO</string>
+    <string name="todo" translatable="false">TODO</string>
     <string name="text_input_login">Input login</string>
     <string name="text_contain_nstu_ru">Login must to contain nstu.ru</string>
     <string name="text_input_password">Input password</string>

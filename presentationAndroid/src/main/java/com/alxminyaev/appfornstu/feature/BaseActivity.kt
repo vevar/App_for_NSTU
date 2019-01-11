@@ -1,4 +1,4 @@
-package com.alxminyaev.app_for_nstu.feature
+package com.alxminyaev.appfornstu.feature
 
 import android.support.v7.app.AppCompatActivity
 

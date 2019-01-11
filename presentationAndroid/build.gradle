@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.alxminyaev.nstuplanner"
+        applicationId "com.alxminyaev.appfornstu"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
@@ -24,6 +24,8 @@ android {
     dataBinding {
         enabled = true
     }
+
+
 }
 
 dependencies {
@@ -65,5 +67,8 @@ dependencies {
 
     implementation project(path: ':domain')
 
-
+    implementation 'com.android.support:multidex:1.0.3'
 }
+
+
+
