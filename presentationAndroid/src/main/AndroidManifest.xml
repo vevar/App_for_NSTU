@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.alxminyaev.appfornstu">
 
-    <!-- TODO -->
+    <!-- TODO  Google indexing-->
     <application
             android:name=".App"
             android:allowBackup="true"
