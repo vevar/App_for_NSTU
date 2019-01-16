@@ -1,3 +1,5 @@
+
+
 buildscript {
     repositories {
         mavenCentral()
@@ -13,7 +15,6 @@ repositories {
     mavenCentral()
 }
 dependencies {
-    def room_version = "1.1.1"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
@@ -23,8 +24,10 @@ dependencies {
 
 //  Room
     implementation 'androidx.room:room-runtime:2.1.0-alpha03'
+
     kapt 'androidx.room:room-compiler:2.1.0-alpha03'
-    compile project(path: ':domain') // use kapt for Kotlin
+
+    compile project(path: ':domain')
 }
 compileKotlin {
     kotlinOptions {

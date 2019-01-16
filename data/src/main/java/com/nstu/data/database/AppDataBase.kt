@@ -1,16 +1,15 @@
-package com.alxminyaev.appfornstu.database
+package com.nstu.data.database
 
 import androidx.room.Database
-import androidx.room.RoomDatabase
-import com.nstu.data.user.dao.UserDao
 import com.nstu.data.entity.UserEntity
 
+// TODO RoomDatabase()
 @Database(entities = [UserEntity::class], version = AppDataBase.VERSION_DATABASE)
-abstract class AppDataBase : RoomDatabase() {
+abstract class AppDataBase {
     companion object {
         const val DATABASE_NAME: String = "com.alxminyaev.appfornstu.database"
         const val VERSION_DATABASE: Int = 1
     }
 
-    abstract fun getUserDao(): UserDao
+    abstract fun getUserDao()
 }

@@ -1,17 +1,13 @@
 package com.alxminyaev.appfornstu
 
 import android.app.Application
-import androidx.room.Room
 import android.content.Context
-import com.alxminyaev.appfornstu.database.AppDataBase
 import com.alxminyaev.appfornstu.network.RetrofitProvider
 
 
 class App: Application() {
 
     lateinit var retrofitProvider: RetrofitProvider
-
-    lateinit var dataBase: AppDataBase
 
     companion object {
         fun getApp(context: Context): App {
@@ -22,9 +18,9 @@ class App: Application() {
             return getApp(context).retrofitProvider
         }
 
-        fun getAppDataBase(context: Context): AppDataBase {
-            return getApp(context).dataBase
-        }
+//        fun getAppDataBase(context: Context): AppDataBase {
+//            return getApp(context).dataBase
+//        }
 
     }
 
