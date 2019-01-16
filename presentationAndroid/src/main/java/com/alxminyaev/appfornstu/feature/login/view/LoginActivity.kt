@@ -1,11 +1,11 @@
 package com.alxminyaev.appfornstu.feature.login.view
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.alxminyaev.appfornstu.R
 import com.alxminyaev.appfornstu.databinding.ActivityLoginBinding
 import com.alxminyaev.appfornstu.feature.BaseActivity
@@ -34,7 +34,7 @@ class LoginActivity : BaseActivity<LoginView>(), LoginView {
     private fun initBindingAndLoginModel() {
         mBinding = DataBindingUtil.setContentView(
             this, R.layout.activity_login
-        )
+        ) as ActivityLoginBinding
         mLoginModel = ViewModelProviders.of(
             this,
             LoginViewModelFactory()
@@ -132,13 +132,14 @@ class LoginActivity : BaseActivity<LoginView>(), LoginView {
         mLoginModel.isNew = false
     }
 
-    override fun onSaveInstanceState(outState: Bundle?) {
+    override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.run {
+        outState.run {
             putString(STATE_LOGIN, mBinding.editTextLogin.text.toString())
             putString(STATE_PASSWORD, mBinding.editTextPassword.text.toString())
         }
     }
+
 
 
     override fun showProgressBar() {

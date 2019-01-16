@@ -1,4 +1,4 @@
-package com.nstu.domain.model
+package com.nstu.domain.model.user
 
 class Student(
     id: Int,
@@ -7,5 +7,4 @@ class Student(
     firstName: String,
     secondName: String,
     middleName: String
-) : User(id, email, password, firstName, secondName, middleName) {
-}
+) : User(id, email, password, firstName, secondName, middleName)

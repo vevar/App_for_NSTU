@@ -1,0 +1,72 @@
+<TimeTable>
+    <week number="1">
+        <day date="01.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="1" type="Лекция">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>11:00</time-start>
+                        <time-end>12:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="2" type="Лекция">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>13:00</time-start>
+                        <time-end>13:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+        </day>
+
+        <day date="02.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="3" type="Семинар">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>11:00</time-start>
+                        <time-end>12:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="4" type="Семинар">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>13:00</time-start>
+                        <time-end>13:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+        </day>
+    </week>
+
+    <week number="2">
+        <day date="07.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="5" type="Лекция">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>11:00</time-start>
+                        <time-end>12:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="3" type="Лекция">
+                    <professor id="123">Вася Пупкин</professor>
+                    <time>
+                        <time-start>13:00</time-start>
+                        <time-end>13:45</time-end>
+                    </time>
+                </lesson>
+            </discipline>
+        </day>
+    </week>
+
+</TimeTable>

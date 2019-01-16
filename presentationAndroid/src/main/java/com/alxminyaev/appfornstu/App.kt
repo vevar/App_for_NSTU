@@ -1,7 +1,7 @@
 package com.alxminyaev.appfornstu
 
 import android.app.Application
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.content.Context
 import com.alxminyaev.appfornstu.database.AppDataBase
 import com.alxminyaev.appfornstu.network.RetrofitProvider
@@ -31,8 +31,8 @@ class App: Application() {
     override fun onCreate() {
         super.onCreate()
 
-        retrofitProvider = RetrofitProvider()
-
+//        retrofitProvider = RetrofitProvider()
+//
 //        dataBase = Room.databaseBuilder(
 //            getApp(this),
 //            AppDataBase::class.java,

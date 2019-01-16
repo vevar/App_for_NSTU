@@ -1,0 +1,23 @@
+<TimeTable>
+    <lesson id="123" type="Лекция">
+        <subject id="123">
+            Программирование
+        </subject>
+        <professor id="123">Вася Пупкин</professor>
+        <when>
+            <week>every</week>
+            <day>1</day>
+            <time-start>11:00</time-start>
+            <time-end>12:45</time-end>
+        </when>
+    </lesson>
+    <subject name="Физика" type="Лекция">
+        <professor id="123">Вася Пупкин</professor>
+        <when>
+            <week>every</week>
+            <day>1</day>
+            <time-start>13:00</time-start>
+            <time-end>13:45</time-end>
+        </when>
+    </subject>
+</TimeTable>

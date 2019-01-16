@@ -1,8 +1,8 @@
 package com.alxminyaev.appfornstu.feature.login.vm
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
-import com.nstu.domain.model.User
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.nstu.domain.model.user.User
 
 
 class LoginViewModel : ViewModel() {
