@@ -24,7 +24,7 @@ class TimeTableRecyclerAdapter(context: Context) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeTableRecyclerHolder {
-        val view = inflater.inflate(R.layout.day_time_table_view, parent, false)
+        val view = inflater.inflate(R.layout.view_day_time_table, parent, false)
         return TimeTableRecyclerHolder(view, inflater)
     }
 
@@ -59,7 +59,7 @@ class TimeTableRecyclerAdapter(context: Context) :
         private val mMapDiscipline: MutableMap<Lesson, Discipline> = mutableMapOf()
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayRecyclerHolder {
-            val view = inflater.inflate(R.layout.subject_time_table_view, parent, false)
+            val view = inflater.inflate(R.layout.view_subject_time_table, parent, false)
             return DayRecyclerHolder(view)
         }
 

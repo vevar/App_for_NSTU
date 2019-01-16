@@ -12,7 +12,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/day_time_table_view">
+                tools:listitem="@layout/view_day_time_table">
 
         </androidx.recyclerview.widget.RecyclerView>
 
