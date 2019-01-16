@@ -2,7 +2,7 @@ package com.nstu.domain.interactor
 
 import com.nstu.domain.executor.ExecutorThread
 import com.nstu.domain.executor.PostExecutorThread
-import io.reactivex.Observable
+import io.reactivex.Maybe
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
@@ -15,10 +15,10 @@ abstract class UseCase<T, Params>(
 
     private val disposables: CompositeDisposable = CompositeDisposable()
 
-    abstract fun buildUseCaseObservable(params: Params): Observable<T>
+    abstract fun buildUseCaseObservable(params: Params): Maybe<T>
 
     fun execute(observer: DisposableObserver<T>, params: Params) {
-        val observable: Observable<T> = buildUseCaseObservable(params)
+        val observable: Maybe<T> = buildUseCaseObservable(params)
             .subscribeOn(Schedulers.from(executorThread))
             .observeOn(postExecutorThread.getScheduler())
 

@@ -27,6 +27,18 @@ android {
         enabled = true
     }
 
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    "src/main/res/layouts/timetable",
+                    "src/main/res/layouts/login",
+                    "src/main/res/layouts/lesson",
+                    "src/main/res/layouts",
+                    "src/main/res"
+            ]
+        }
+    }
+
 }
 
 dependencies {
@@ -66,10 +78,8 @@ dependencies {
     //    ReactiveX
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
 
-
     //Domain module
     implementation project(':domain')
-    implementation project(':data')
 }
 
 

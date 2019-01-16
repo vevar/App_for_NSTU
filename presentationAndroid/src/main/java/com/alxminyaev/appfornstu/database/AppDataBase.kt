@@ -3,7 +3,7 @@ package com.alxminyaev.appfornstu.database
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.nstu.data.user.dao.UserDao
-import com.nstu.data.user.entity.UserEntity
+import com.nstu.data.entity.UserEntity
 
 @Database(entities = [UserEntity::class], version = AppDataBase.VERSION_DATABASE)
 abstract class AppDataBase : RoomDatabase() {
