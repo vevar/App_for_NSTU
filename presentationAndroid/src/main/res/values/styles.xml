@@ -8,4 +8,25 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AlxDarkTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/colorTextHeader</item>
+
+
+        <item name="android:colorForeground">@color/colorAccent</item>
+
+    </style>
+
+    <style name="AlxText" parent="AlxDarkTheme">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <style name="AlxTextHeader" parent="AlxText">
+        <item name="android:textSize">@dimen/textSizeHeaderLarge</item>
+    </style>
+
+
 </resources>
