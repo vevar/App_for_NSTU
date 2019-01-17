@@ -8,6 +8,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".feature.lesson.view.LessonActivity">
-        <include layout="@layout/view_header_lesson_new"/>
+        <include layout="@layout/view_header_lesson"/>
     </LinearLayout>
 </layout>

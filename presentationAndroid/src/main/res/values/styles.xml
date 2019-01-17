@@ -27,6 +27,9 @@
     <style name="AlxTextHeader" parent="AlxText">
         <item name="android:textSize">@dimen/textSizeHeaderLarge</item>
     </style>
+    <style name="AlxTextHeader.Medium" parent="AlxTextHeader">
+        <item name="android:textSize">@dimen/textSizeHeaderMedium</item>
+    </style>
 
 
 </resources>

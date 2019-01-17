@@ -7,4 +7,8 @@
     <string name="text_input_login">Input login</string>
     <string name="text_contain_nstu_ru">Login must to contain nstu.ru</string>
     <string name="text_input_password">Input password</string>
+
+    <string name="professor">Professor</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
 </resources>
