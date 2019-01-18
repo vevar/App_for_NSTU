@@ -15,13 +15,14 @@
             android:theme="@style/AlxDarkTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".feature.login.view.LoginActivity">
+
+        </activity>
+        <activity android:name=".feature.lesson.view.LessonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".feature.lesson.view.LessonActivity">
         </activity>
     </application>
 

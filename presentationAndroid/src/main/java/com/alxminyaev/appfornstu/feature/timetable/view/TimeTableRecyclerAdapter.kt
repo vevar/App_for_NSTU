@@ -59,7 +59,7 @@ class TimeTableRecyclerAdapter(context: Context) :
         private val mMapDiscipline: MutableMap<Lesson, Discipline> = mutableMapOf()
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayRecyclerHolder {
-            val view = inflater.inflate(R.layout.view_subject_time_table, parent, false)
+            val view = inflater.inflate(R.layout.view_lesson_time_table, parent, false)
             return DayRecyclerHolder(view)
         }
 
@@ -89,7 +89,7 @@ class TimeTableRecyclerAdapter(context: Context) :
 
         class DayRecyclerHolder(view: View) : RecyclerView.ViewHolder(view) {
             //TODO need all fields
-            private val mTextViewSubjectName = view.findViewById<TextView>(R.id.subject_name)
+            private val mTextViewSubjectName = view.findViewById<TextView>(R.id.discipline_name)
 
             fun bind(nameDiscipline: String, lesson: Lesson) {
                 mTextViewSubjectName.text = nameDiscipline

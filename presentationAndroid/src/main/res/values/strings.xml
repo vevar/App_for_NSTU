@@ -11,4 +11,11 @@
     <string name="professor">Professor</string>
     <string name="location">Location</string>
     <string name="time">Time</string>
+
+    <string name="tasks">Tasks</string>
+    <string name="complete_task">Complete of task</string>
+
+    <string name="time_of_get">Time of get</string>
+    <string name="time_of_give">Time of give</string>
+
 </resources>

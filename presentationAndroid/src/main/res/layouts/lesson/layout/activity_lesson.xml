@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".feature.lesson.view.LessonActivity">
-        <include layout="@layout/view_header_lesson"/>
+
+        <include
+                layout="@layout/view_header_lesson"/>
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/default_radius">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tasks"
+                    android:background="@color/colorAccent"
+                    android:padding="@dimen/default_padding"
+                    style="@style/AlxTextHeader.Medium.Light"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/view_task_lesson">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
+
 </layout>

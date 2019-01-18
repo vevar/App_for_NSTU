@@ -13,7 +13,8 @@ import com.alxminyaev.appfornstu.feature.login.vm.LoginViewModel
 import com.alxminyaev.appfornstu.feature.login.vm.LoginViewModelFactory
 
 
-class LoginActivity : BaseActivity<LoginView>(), LoginView {
+class
+LoginActivity : BaseActivity<LoginView>(), LoginView {
 
     companion object {
         private const val STATE_LOGIN = "login"

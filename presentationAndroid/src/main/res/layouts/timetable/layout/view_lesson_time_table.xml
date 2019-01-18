@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--TODO refactor icon-->
 <androidx.cardview.widget.CardView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tool="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_bar_large"
+        android:layout_height="wrap_content"
         android:padding="@dimen/default_padding"
         app:cardBackgroundColor="@color/colorBackground">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/default_margin">
 
         <TextView
                 android:id="@+id/discipline_name"
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/discipline_time_icon"
                 app:layout_constraintBottom_toTopOf="@+id/professor_name"
                 app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintHorizontal_bias="0.5"
-                style="@style/AlxTextHeader.Medium"
+                style="@style/AlxTextHeader.Small"
                 android:scrollHorizontally="true"
-                android:maxLines="2"
+                android:maxLines="3"
                 android:ellipsize="end"
-                tool:text="Интеллектуальные системы и технологии Интеллектуальные системы и технологии "/>
+                tool:text="Интеллектуальные системы и технологии интеллектуальные системы и технологии"/>
         <ImageView
                 android:id="@+id/discipline_time_icon"
                 android:layout_width="@dimen/width_icon_small"

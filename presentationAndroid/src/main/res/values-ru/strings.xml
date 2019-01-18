@@ -12,4 +12,9 @@
     <string name="location">Location</string>
     <string name="time">Время</string>
 
+    <string name="tasks">Задания</string>
+    <string name="complete_task">Выполнение задания</string>
+    <string name="time_of_get">Время получения</string>
+    <string name="time_of_give">Время сдачи</string>
+
 </resources>
