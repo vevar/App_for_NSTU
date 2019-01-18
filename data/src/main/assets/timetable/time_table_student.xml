@@ -1,0 +1,101 @@
+<TimeTable>
+    <id>1</id>
+    <listDays>
+        <day date="01.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="1" type="Лекция">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>
+                    <time>
+                        <start>11:00</start>
+                        <end>12:45</end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="2" type="Лекция">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>                <time>
+                    <start>13:00</start>
+                    <end>13:45</end>
+                </time>
+                </lesson>
+            </discipline>
+        </day>
+
+        <day date="02.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="3" type="Семинар">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>
+                    <time>
+                        <start>11:00</start>
+                        <end>12:45</end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="4" type="Семинар">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>
+                    <time>
+                        <start>13:00</start>
+                        <end>13:45</end>
+                    </time>
+                </lesson>
+            </discipline>
+        </day>
+
+        <day date="07.09.2018">
+            <discipline id="1" name="Программирование">
+                <lesson id="5" type="Лекция">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>
+                    <time>
+                        <start>11:00</start>
+                        <end>12:45</end>
+                    </time>
+                </lesson>
+            </discipline>
+
+            <discipline id="2" name="Физика">
+                <lesson id="3" type="Лекция">
+                    <professor>
+                        <id>123</id>
+                        <firstName>Вася</firstName>
+                        <secondName>Пупкин</secondName>
+                        <middleName>Пупкевич</middleName>
+                    </professor>
+                    <time>
+                        <start>13:00</start>
+                        <end>13:45</end>
+                    </time>
+                </lesson>
+            </discipline>
+        </day>
+    </listDays>
+
+
+</TimeTable>

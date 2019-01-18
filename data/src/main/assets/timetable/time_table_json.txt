@@ -1,0 +1,122 @@
+{
+   "id": "1",
+   "listDays": [
+      {
+         "date": "01.09.2018",
+         "disciplines": [
+            {
+               "id": "1",
+               "name": "Программирование",
+               "lesson": {
+                  "id": "1",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "11:00",
+                     "end": "12:45"
+                  }
+               }
+            },
+            {
+               "id": "2",
+               "name": "Физика",
+               "lesson": {
+                  "id": "2",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "13:00",
+                     "end": "13:45"
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "date": "02.09.2018",
+         "disciplines": [
+            {
+               "id": "1",
+               "name": "Программирование",
+               "lesson": {
+                  "id": "3",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "11:00",
+                     "end": "12:45"
+                  }
+               }
+            },
+            {
+               "id": "2",
+               "name": "Физика",
+               "lesson": {
+                  "id": "4",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "13:00",
+                     "end": "13:45"
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "date": "07.09.2018",
+         "disciplines": [
+            {
+               "id": "1",
+               "name": "Программирование",
+               "lesson": {
+                  "id": "5",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "11:00",
+                     "end": "12:45"
+                  }
+               }
+            },
+            {
+               "id": "2",
+               "name": "Физика",
+               "lesson": {
+                  "id": "3",
+                  "professor": {
+                     "id": "123",
+                     "firstName": "Вася",
+                     "secondName": "Пупкин",
+                     "middleName": "Пупкевич"
+                  },
+                  "time": {
+                     "start": "13:00",
+                     "end": "13:45"
+                  }
+               }
+            }
+         ]
+      }
+   ]
+}

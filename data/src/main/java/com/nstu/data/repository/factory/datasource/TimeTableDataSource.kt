@@ -5,5 +5,5 @@ import io.reactivex.Maybe
 
 interface TimeTableDataSource {
 
-    fun getByUserId(id: Int): Maybe<TimeTableEntity>
+    fun getById(id: Int): Maybe<TimeTableEntity>
 }

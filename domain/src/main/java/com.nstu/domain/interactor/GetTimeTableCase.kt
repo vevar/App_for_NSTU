@@ -16,7 +16,7 @@ class GetTimeTableCase(
         postExecutorThread
     ) {
     override fun buildUseCaseObservable(params: Params): Maybe<TimeTable> {
-        return timeTableRepository.findByUserId(params.userId)
+        return timeTableRepository.findById(params.userId)
     }
 
     companion object {

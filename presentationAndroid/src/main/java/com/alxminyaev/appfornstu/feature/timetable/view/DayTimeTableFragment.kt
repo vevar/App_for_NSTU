@@ -28,6 +28,7 @@ class DayTimeTableFragment : Fragment() {
             mBinding.recyclerTimeTable.adapter = TimeTableRecyclerAdapter(context!!)
         }
 
+
         return mBinding.root
     }
 

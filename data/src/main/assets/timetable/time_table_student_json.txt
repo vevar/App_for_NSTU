@@ -1,0 +1,25 @@
+{
+    "id": 1,
+    "listDays": [
+    {
+        "date": "01.09.2018",
+        "discipline": {
+            "id": 1,
+            "name": "Программирование",
+            "lesson": {
+                "id": 1,
+                "type": "Лекция",
+                "professor": {
+                    "id": 1,
+                    "firstName": "Вася",
+                    "secondName": "Пупкин",
+                    "middleName": "Пукевич"
+                },
+                "time": {
+                    "start": "11:00"
+                    "end": "12:45"
+                }
+            }
+        }
+    }]
+}
