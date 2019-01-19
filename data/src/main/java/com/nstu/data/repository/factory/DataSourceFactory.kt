@@ -1,8 +1,8 @@
 package com.nstu.data.repository.factory
 
-interface DataSourceFactory<T> {
+interface DataSourceFactory<B, C> {
 
-    fun createBaseDataSource(): T
+    fun createBaseDataSource(): B
 
-    fun createCloudDataSource(): T
+    fun createCloudDataSource(): C
 }

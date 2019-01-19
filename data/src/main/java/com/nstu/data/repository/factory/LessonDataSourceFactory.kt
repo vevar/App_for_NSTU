@@ -1,14 +1,19 @@
 package com.nstu.data.repository.factory
 
-import com.nstu.data.repository.factory.datasource.LessonDataSource
+import com.nstu.data.repository.factory.datasource.base.LessonBaseDataSource
+import com.nstu.data.repository.factory.datasource.base.LessonBaseDataSourceImpl
+import com.nstu.data.repository.factory.datasource.cloud.LessoCloudDataSourceImpl
+import com.nstu.data.repository.factory.datasource.cloud.LessonCloudDataSource
 
-class LessonDataSourceFactory {
-    fun createBaseSource(): LessonDataSource {
-        TODO()
+class LessonDataSourceFactory :
+    DataSourceFactory<LessonBaseDataSource, LessonCloudDataSource> {
+    override fun createBaseDataSource(): LessonBaseDataSource {
+        return LessonBaseDataSourceImpl()
     }
 
-    fun createCloudSource(): LessonDataSource {
-        TODO()
+    override fun createCloudDataSource(): LessonCloudDataSource {
+        return LessoCloudDataSourceImpl()
     }
+
 
 }
