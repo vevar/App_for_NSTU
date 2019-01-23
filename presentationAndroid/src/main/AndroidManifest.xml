@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.alxminyaev.appfornstu">
+          package="com.gwsf.appfornstu">
 
     <!-- TODO  Google indexing-->
     <application
-            android:name=".App"
+            android:name="com.gwsf.appfornstu.App"
             android:allowBackup="true"
             android:fullBackupContent="@xml/backup_descriptor"
             android:icon="@mipmap/ic_launcher"
@@ -14,10 +14,10 @@
             android:supportsRtl="true"
             android:theme="@style/AlxDarkTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".feature.login.view.LoginActivity">
+        <activity android:name="com.gwsf.appfornstu.feature.login.view.LoginActivity">
 
         </activity>
-        <activity android:name=".feature.lesson.view.LessonActivity">
+        <activity android:name="com.gwsf.appfornstu.feature.lesson.view.LessonActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -3,7 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
     <data>
-        <variable name="loginModel" type="com.alxminyaev.appfornstu.feature.login.vm.LoginViewModel"/>
+        <variable name="loginModel" type="com.gwsf.appfornstu.feature.login.vm.LoginViewModel"/>
     </data>
     <FrameLayout
             android:layout_width="match_parent"

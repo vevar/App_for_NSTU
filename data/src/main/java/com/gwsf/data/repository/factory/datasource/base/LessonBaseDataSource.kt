@@ -1,0 +1,4 @@
+package com.gwsf.data.repository.factory.datasource.base
+
+class LessonBaseDataSource {
+}
