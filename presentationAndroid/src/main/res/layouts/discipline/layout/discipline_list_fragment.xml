@@ -9,8 +9,7 @@
             android:orientation="vertical">
 
         <include
-                layout="@layout/view_bar_common"
-               />
+                layout="@layout/view_bar_discipline"/>
 
         <FrameLayout
                 android:layout_width="match_parent"

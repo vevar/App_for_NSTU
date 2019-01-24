@@ -18,4 +18,6 @@
     <string name="time_of_get">Time of get</string>
     <string name="time_of_give">Time of give</string>
 
+    <string name="search_discipline">Search disciplines</string>
+
 </resources>

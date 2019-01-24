@@ -16,5 +16,6 @@
     <string name="complete_task">Выполнение задания</string>
     <string name="time_of_get">Время получения</string>
     <string name="time_of_give">Время сдачи</string>
+    <string name="search_discipline">Поиск дисциплин</string>
 
 </resources>

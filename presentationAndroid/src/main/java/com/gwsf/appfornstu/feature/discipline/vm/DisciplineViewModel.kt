@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.gwsf.domain.interactor.GetListDisciplinesCase
 import com.gwsf.domain.model.discipline.Discipline
 import com.gwsf.domain.model.user.Professor
-import io.reactivex.observers.DisposableObserver
 import java.util.*
 
 class DisciplineViewModel(
