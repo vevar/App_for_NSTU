@@ -9,7 +9,11 @@
 
         <item name="android:colorForeground">@color/colorAccent</item>
 
-
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
 
     </style>
 
