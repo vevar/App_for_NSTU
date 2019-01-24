@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.gwsf.domain.interactor.GetListDisciplinesCase
 import com.gwsf.domain.model.discipline.Discipline
+import com.gwsf.domain.model.user.Professor
 import io.reactivex.observers.DisposableObserver
 import java.util.*
 
@@ -17,24 +18,24 @@ class DisciplineViewModel(
 
     fun loadListDisciplines() {
         val mutableListOf: MutableList<Discipline> = mutableListOf()
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
-        mutableListOf.add(Discipline(1, "Name", Collections.emptyList()))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
+        mutableListOf.add(Discipline(1, "Интеллектуальные системы и технологии", Collections.singletonList(Professor(1,"asd","asd,", "Vasy","Pyplin","asdf"))))
 
         listDiscipline.value = mutableListOf
 

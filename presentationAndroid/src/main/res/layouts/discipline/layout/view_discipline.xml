@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/default_margin">
+            android:layout_margin="10dp">
 
         <TextView
                 android:id="@+id/discipline_name"
@@ -21,6 +21,7 @@
                 style="@style/AlxTextHeader.Small"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="@dimen/default_margin"
                 tools:text="Интеллектуальные системы и технологии"/>
         <TextView
                 android:id="@+id/professor_name"

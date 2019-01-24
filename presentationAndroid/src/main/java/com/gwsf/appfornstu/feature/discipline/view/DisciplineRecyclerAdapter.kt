@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gwsf.appfornstu.R
 import com.gwsf.domain.model.discipline.Discipline
+import org.w3c.dom.Text
 
 class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<DisciplineRecyclerAdapter.DisciplineHolder>() {
 
@@ -37,9 +38,13 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
     class DisciplineHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         private val disciplineName: TextView = view.findViewById(R.id.discipline_name)
+        private val professorName: TextView = view.findViewById(R.id.professor_name)
+
 
         fun bind(discipline: Discipline) {
             disciplineName.text = discipline.name
+            val professor = discipline.listProfessors[0]
+            professorName.text = "${professor.firstName}  ${professor.secondName}"
         }
     }
 }

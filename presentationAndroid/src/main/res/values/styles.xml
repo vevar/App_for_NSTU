@@ -9,6 +9,7 @@
 
         <item name="android:colorForeground">@color/colorAccent</item>
 
+        <item name="android:colorBackground">@color/colorBackground</item>
 
 
     </style>
