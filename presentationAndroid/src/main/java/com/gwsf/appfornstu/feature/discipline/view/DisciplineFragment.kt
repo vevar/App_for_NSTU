@@ -8,6 +8,7 @@ import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gwsf.appfornstu.R
 import com.gwsf.appfornstu.databinding.DisciplineListFragmentBinding
@@ -53,6 +54,7 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
 
         mDisciplineAdapter = DisciplineRecyclerAdapter(this.context!!)
         mBinding.recyclerDisciplines.adapter = mDisciplineAdapter
+        mBinding.recyclerDisciplines.layoutManager = LinearLayoutManager(this.context)
 
         return mBinding.root
     }
@@ -61,7 +63,7 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
         super.onStart()
 
         showProgressBar()
-//        mViewModel.loadListDisciplines()
+        mViewModel.loadListDisciplines()
     }
 
     override fun onResume() {

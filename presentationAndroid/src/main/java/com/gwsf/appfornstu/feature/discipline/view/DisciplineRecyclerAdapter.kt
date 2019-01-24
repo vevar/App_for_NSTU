@@ -22,7 +22,7 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DisciplineHolder {
-        val view = inflater.inflate(R.layout.discipline_list_fragment, parent, false)
+        val view = inflater.inflate(R.layout.view_discipline, parent, false)
         return DisciplineHolder(view)
     }
 

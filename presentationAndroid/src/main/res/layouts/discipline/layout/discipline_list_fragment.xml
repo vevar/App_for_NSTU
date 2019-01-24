@@ -9,7 +9,7 @@
             android:orientation="vertical">
 
         <include
-                layout="@layout/view_bar_discipline"
+                layout="@layout/view_bar_common"
                />
 
         <FrameLayout
@@ -20,7 +20,7 @@
                     android:id="@+id/recycler_disciplines"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    tools:listitem="@layout/view_common_bar">
+                    tools:listitem="@layout/view_discipline">
 
             </androidx.recyclerview.widget.RecyclerView>
 
