@@ -14,6 +14,13 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val listDiscipline: MutableList<Discipline> = mutableListOf()
 
+    fun setListDiscipline(listDiscipline: List<Discipline>) {
+        this.listDiscipline.clear()
+        this.listDiscipline.addAll(listDiscipline)
+        notifyDataSetChanged()
+    }
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DisciplineHolder {
         val view = inflater.inflate(R.layout.discipline_list_fragment, parent, false)
         return DisciplineHolder(view)

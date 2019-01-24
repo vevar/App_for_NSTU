@@ -2,11 +2,11 @@
 <resources>
     <color name="colorPrimary">#fff</color>
     <color name="colorPrimaryDark">#000</color>
-    <color name="colorAccent">#3c9421</color>
+    <color name="colorAccent">#3FB81D</color>
 
-    <color name="colorStatusBar">#ffffff</color>
+    <color name="colorStatusBar">#3FB81D</color>
 
-    <color name="colorBackground">#fff</color>
+    <color name="colorBackground">#BEFFFFFF</color>
 
     <color name="colorTextHeader">#000</color>
     <!--TEXT-->

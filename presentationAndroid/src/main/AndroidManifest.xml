@@ -17,7 +17,8 @@
         <activity android:name="com.gwsf.appfornstu.feature.login.view.LoginActivity">
 
         </activity>
-        <activity android:name="com.gwsf.appfornstu.feature.lesson.view.LessonActivity">
+
+        <activity android:name=".feature.container.ContainerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
