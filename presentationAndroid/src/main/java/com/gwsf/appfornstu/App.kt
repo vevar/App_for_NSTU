@@ -7,7 +7,9 @@ import com.gwsf.appfornstu.network.RetrofitProvider
 
 class App: Application() {
 
-    lateinit var retrofitProvider: RetrofitProvider
+
+    private lateinit var retrofitProvider: RetrofitProvider
+
 
     companion object {
         fun getApp(context: Context): App {
@@ -17,6 +19,8 @@ class App: Application() {
         fun getRetrofitProvider(context: Context): RetrofitProvider {
             return getApp(context).retrofitProvider
         }
+
+
 
 //        fun getAppDataBase(context: Context): AppDataBase {
 //            return getApp(context).dataBase

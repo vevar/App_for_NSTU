@@ -1,2 +1,2 @@
-include ':presentationAndroid'
 include ':data'
+include ':presentationAndroid'
