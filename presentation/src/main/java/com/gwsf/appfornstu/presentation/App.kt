@@ -2,7 +2,7 @@ package com.gwsf.appfornstu.presentation
 
 import android.app.Application
 import android.content.Context
-import com.gwsf.appfornstu.presentation.network.RetrofitProvider
+import com.gwsf.appfornstu.data.network.RetrofitProvider
 
 
 class App: Application() {
