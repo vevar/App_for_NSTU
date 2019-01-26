@@ -1,4 +1,5 @@
-apply plugin: 'com.android.application'
+
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
 
@@ -7,15 +8,15 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 
+
 android {
     def globalConfiguration = rootProject.extensions.getByName('ext')
 
-
     compileSdkVersion globalConfiguration['androidCompileSdkVersion']
 
-    defaultConfig {
-        applicationId globalConfiguration['androidApplicationId']
 
+    defaultConfig {
+//        applicationId globalConfiguration['androidApplicationId']
 
         minSdkVersion globalConfiguration['androidMinSdkVersion']
         targetSdkVersion globalConfiguration['androidTargetSdkVersion']
@@ -24,18 +25,27 @@ android {
         testInstrumentationRunner globalConfiguration['androidTestInstrumentationRunner']
 
         vectorDrawables.useSupportLibrary globalConfiguration['androidVDUseSupportLibrary']
+
+        versionCode globalConfiguration['androidVersionCode']
+        versionName globalConfiguration['androidVersionName']
     }
 
 
-    buildTypes {
+//    flavorDimensions "version"
+//    productFlavors {
+//        develop {
+//            dimension "version"
+//        }
+//        production {
+//            dimension "version"
+//
+//        }
+//    }
 
+    buildTypes {
         debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-            testOptions {
-                unitTests.returnDefaultValues = false
-            }
         }
 
         release {
@@ -43,13 +53,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-
 }
+
 
 
 dependencies {
     def dataDependencies = rootProject.ext.dataDependencies
+    def dataTestDependencies = rootProject.ext.dataTestDependencies
 
     implementation dataDependencies.kotlinLib
 
@@ -76,5 +86,10 @@ dependencies {
 
 //    Dagger
     implementation dataDependencies.dagger
-    annotationProcessor dataDependencies.daggerCompiler
+    kapt dataDependencies.daggerCompiler
+
+    //    Test
+    testImplementation dataTestDependencies.junit
+    androidTestImplementation dataTestDependencies.runner
+    androidTestImplementation dataTestDependencies.espresso
 }

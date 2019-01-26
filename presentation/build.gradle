@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName('ext')
+
+    compileSdkVersion globalConfiguration['androidCompileSdkVersion']
+
+    defaultConfig {
+        applicationId globalConfiguration['androidApplicationId']
+
+        minSdkVersion globalConfiguration['androidMinSdkVersion']
+        targetSdkVersion globalConfiguration['androidTargetSdkVersion']
+
+        testInstrumentationRunner globalConfiguration['androidTestInstrumentationRunner']
+
+        vectorDrawables.useSupportLibrary globalConfiguration['androidVDUseSupportLibrary']
+
+        versionCode globalConfiguration['androidVersionCode']
+        versionName globalConfiguration['androidVersionName']
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    "src/main/res/layouts/timetable",
+                    "src/main/res/layouts/login",
+                    "src/main/res/layouts/lesson",
+                    "src/main/res/layouts/discipline",
+                    "src/main/res/layouts",
+                    "src/main/res"
+            ]
+        }
+    }
+
+//    flavorDimensions "version"
+//    productFlavors {
+//        develop {
+//            dimension "version"
+//        }
+//        production {
+//            dimension "version"
+//
+//        }
+//    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation presentationDependencies.kotlinLib
+
+//    Data module
+    implementation project(path: ':data')
+//
+//    debugImplementation project(path: ':data', configuration: 'developDebug')
+//    releaseImplementation project(path: ':data', configuration: 'developRelease')
+//
+//    debugImplementation project(path: ':data', configuration: 'productionDebug')
+//    releaseImplementation project(path: ':data', configuration: 'productionRelease')
+
+//    Domain module
+    implementation presentationDependencies.domain
+
+//    View
+    implementation presentationDependencies.appCompat
+    implementation presentationDependencies.constraintLayout
+    implementation presentationDependencies.legacy
+    implementation presentationDependencies.material
+    implementation presentationDependencies.recyclerView
+    implementation presentationDependencies.cardView
+
+//    Arch
+    implementation presentationDependencies.lifeCycleExtention
+    implementation presentationDependencies.lifeCycleViewModel
+
+//    ReactiveX
+    implementation presentationDependencies.rxJava
+    implementation presentationDependencies.rxAndroid
+
+//    Dagger
+    implementation presentationDependencies.dagger
+    kapt presentationDependencies.daggerCompiler
+
+//    Test
+    testImplementation presentationTestDependencies.junit
+    androidTestImplementation presentationTestDependencies.runner
+    androidTestImplementation presentationTestDependencies.espresso
+
+}

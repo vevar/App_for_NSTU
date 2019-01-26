@@ -21,7 +21,15 @@ allprojects {
 
         androidVDUseSupportLibrary = true
     }
+
+//    configurations {
+//        developDebug
+//        developRelease
+//        productionDebug
+//        productionRelease
+//    }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

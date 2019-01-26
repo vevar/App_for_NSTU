@@ -3,6 +3,7 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+
         maven { url 'https://jitpack.io' }
     }
 }
@@ -14,7 +15,11 @@ ext {
     androidMinSdkVersion = 14
     androidTargetSdkVersion = 28
     androidCompileSdkVersion = 28
+    // Defines the version number of your app.
+    androidVersionCode = 1
 
+    // Defines a user-friendly version name for your app.
+    androidVersionName = "1.0"
 //Libraries
     domainVersion = '-SNAPSHOT'
 
@@ -47,7 +52,7 @@ ext {
 
 
     presentationDependencies = [
-            kotlinLib         : "org.jetbrains.kotlin:kotlin-stdlib",
+            kotlinLib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             domain            : "com.github.GangstersWithSingleFinger:domain.nstuApp-Student-Rating:${domainVersion}",
             daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
             dagger            : "com.google.dagger:dagger:${daggerVersion}",
@@ -70,7 +75,7 @@ ext {
     ]
 
     dataDependencies = [
-            kotlinLib            : "org.jetbrains.kotlin:kotlin-stdlib",
+            kotlinLib            : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             domain               : "com.github.GangstersWithSingleFinger:domain.nstuApp-Student-Rating:${domainVersion}",
             rxJava               : "io.reactivex.rxjava2:rxandroid:${rxJavaVersion}",
             rxAndroid            : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
@@ -87,7 +92,9 @@ ext {
     ]
 
     dataTestDependencies = [
-
+            junit   : "junit:junit:${junitVersion}",
+            runner  : "androidx.test:runner:${runnerVersion}",
+            espresso: "androidx.test.espresso:espresso-core:${espressoVersion}"
     ]
 
     developmentDependencies = [
