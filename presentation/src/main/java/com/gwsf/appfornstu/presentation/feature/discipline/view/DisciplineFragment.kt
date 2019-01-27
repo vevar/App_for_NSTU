@@ -34,16 +34,6 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
         hideProgressBar()
     }
 
-    override fun showProgressBar() {
-        mBinding.recyclerDisciplines.visibility = RecyclerView.GONE
-        mBinding.progressBar.visibility = ProgressBar.VISIBLE
-    }
-
-    override fun hideProgressBar() {
-        mBinding.progressBar.visibility = ProgressBar.GONE
-        mBinding.recyclerDisciplines.visibility = RecyclerView.VISIBLE
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -87,5 +77,15 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
         super.onPause()
 
         mViewModel.listDiscipline.removeObserver(mListDisciplineObserver)
+    }
+
+    override fun showProgressBar() {
+        mBinding.recyclerDisciplines.visibility = RecyclerView.GONE
+        mBinding.progressBar.visibility = ProgressBar.VISIBLE
+    }
+
+    override fun hideProgressBar() {
+        mBinding.progressBar.visibility = ProgressBar.GONE
+        mBinding.recyclerDisciplines.visibility = RecyclerView.VISIBLE
     }
 }

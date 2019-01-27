@@ -11,4 +11,10 @@ abstract class BaseActivity<T : MVVMView> : AppCompatActivity() {
 
         App.getApp(this).getApplicationComponent()
     }
+
+    fun addFragment(containerId: Int, baseFragment: BaseFragment): Int {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(containerId, baseFragment)
+        return transaction.commit()
+    }
 }
