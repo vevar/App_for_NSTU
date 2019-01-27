@@ -1,4 +1,4 @@
-package com.gwsf.appfornstu.data.repository.factory.datasource.cloud.dto
+package com.gwsf.appfornstu.data.dto
 
 class ProfessorDTO (
     val id: Int,

@@ -1,5 +1,8 @@
-package com.gwsf.appfornstu.data.entity
+package com.gwsf.appfornstu.data.database.entity
 
+import androidx.room.Entity
+
+@Entity
 data class UserEntity(
     val id: Int,
     val email: String,
