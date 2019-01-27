@@ -10,21 +10,24 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.gwsf.appfornstu.presentation.App
 import com.gwsf.appfornstu.presentation.R
 import com.gwsf.appfornstu.presentation.databinding.DisciplineListFragmentBinding
 import com.gwsf.appfornstu.presentation.feature.BaseFragment
 import com.gwsf.appfornstu.presentation.feature.discipline.vm.DisciplineViewModel
 import com.gwsf.appfornstu.presentation.feature.discipline.vm.DisciplineViewModelFactory
 import com.gwsf.domain.model.discipline.Discipline
+import javax.inject.Inject
 
 class DisciplineFragment : BaseFragment(), DisciplineView {
 
+    @Inject
+    lateinit var mDisciplineViewModelFactory: DisciplineViewModelFactory
 
     private lateinit var mViewModel: DisciplineViewModel
     private lateinit var mBinding: DisciplineListFragmentBinding
 
     private lateinit var mDisciplineAdapter: DisciplineRecyclerAdapter
-
 
     private val mListDisciplineObserver = Observer<List<Discipline>> {
         mDisciplineAdapter.setListDiscipline(it)
@@ -44,13 +47,21 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mViewModel = ViewModelProviders.of(this,DisciplineViewModelFactory(0)).get(DisciplineViewModel::class.java)
+        App.getApp(this.requireContext())
+            .getScreenComponent()
+            .inject(this)
+
+        mViewModel = ViewModelProviders.of(this, mDisciplineViewModelFactory)
+            .get(DisciplineViewModel::class.java)
+
+
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.discipline_list_fragment, container, false)
+        mBinding = DataBindingUtil
+            .inflate(inflater, R.layout.discipline_list_fragment, container, false)
 
         mDisciplineAdapter = DisciplineRecyclerAdapter(this.context!!)
         mBinding.recyclerDisciplines.adapter = mDisciplineAdapter

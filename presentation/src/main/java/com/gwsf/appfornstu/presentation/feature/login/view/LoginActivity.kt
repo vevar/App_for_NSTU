@@ -13,7 +13,8 @@ import com.gwsf.appfornstu.presentation.feature.login.vm.LoginViewModel
 import com.gwsf.appfornstu.presentation.feature.login.vm.LoginViewModelFactory
 
 
-class LoginActivity : BaseActivity<LoginView>(), LoginView {
+class
+LoginActivity : BaseActivity<LoginView>(), LoginView {
 
     companion object {
         private const val STATE_LOGIN = "login"
@@ -41,7 +42,7 @@ class LoginActivity : BaseActivity<LoginView>(), LoginView {
         )
             .get(LoginViewModel::class.java)
 
-//        mBinding.loginModel = mLoginModel
+        mBinding.loginModel = mLoginModel
 
         mBinding.buttonLogin.setOnClickListener {
             mLoginModel.login.value = mBinding.editTextLogin.text.toString()
@@ -139,6 +140,7 @@ class LoginActivity : BaseActivity<LoginView>(), LoginView {
             putString(STATE_PASSWORD, mBinding.editTextPassword.text.toString())
         }
     }
+
 
 
     override fun showProgressBar() {
