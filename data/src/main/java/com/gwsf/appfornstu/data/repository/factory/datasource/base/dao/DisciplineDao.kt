@@ -7,6 +7,6 @@ import io.reactivex.Maybe
 
 @Dao
 interface DisciplineDao {
-    @Query("SELECT * FROM ${DisciplineEntity.TABLE_NAME} WHERE ")
+    @Query("SELECT * FROM ${DisciplineEntity.TABLE_NAME} WHERE uid LIKE :userId")
     fun getDisciplinesById(userId: Int): Maybe<List<DisciplineEntity>>
 }

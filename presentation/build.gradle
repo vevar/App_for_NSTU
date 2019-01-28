@@ -103,6 +103,10 @@ dependencies {
 //    ReactiveX
     implementation presentationDependencies.rxJava
     implementation presentationDependencies.rxAndroid
+//    Room
+    implementation presentationDependencies.roomRuntime
+    kapt presentationDependencies.roomCompiler
+    implementation presentationDependencies.roomRx
 
 //    Dagger
     implementation presentationDependencies.dagger
@@ -112,5 +116,6 @@ dependencies {
     testImplementation presentationTestDependencies.junit
     androidTestImplementation presentationTestDependencies.runner
     androidTestImplementation presentationTestDependencies.espresso
+
 
 }

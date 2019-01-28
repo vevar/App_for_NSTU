@@ -37,6 +37,7 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         App.getApp(this.requireContext())
             .getScreenComponent()
             .inject(this)

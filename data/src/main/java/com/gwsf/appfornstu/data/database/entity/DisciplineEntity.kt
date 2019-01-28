@@ -1,12 +1,14 @@
 package com.gwsf.appfornstu.data.database.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = DisciplineEntity.TABLE_NAME)
 data class DisciplineEntity(
     @PrimaryKey
-    val id: Int,
+    @ColumnInfo(name = "uid")
+    val uid: Int,
     val name: String
 ) {
     companion object {
