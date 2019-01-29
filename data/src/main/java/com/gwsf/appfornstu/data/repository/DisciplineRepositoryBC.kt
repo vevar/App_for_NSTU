@@ -29,9 +29,11 @@ class DisciplineRepositoryBC @Inject constructor(
         val cloud = disciplineCloudDataSource.get().getListDisciplinesByUserId(userId)
             .doOnSuccess { list ->
                 disciplineBaseDataSource.get().postListDisciplines(list)
+                    .subscribe()
+
             }
 
-        return Observable.merge(base.toObservable(),cloud.toObservable()).map {
+        return Observable.merge(base.toObservable(), cloud.toObservable()).map {
             it.map { disciplineDTO ->
                 DisciplineMapper.convert(disciplineDTO)
             }

@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gwsf.appfornstu.presentation.R
 import com.gwsf.domain.model.discipline.Discipline
 
-class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<DisciplineRecyclerAdapter.DisciplineHolder>() {
+class DisciplineRecyclerAdapter(
+    context: Context,
+    private val selectDisciplineListener: SelectDisciplineListener
+) : RecyclerView.Adapter<DisciplineRecyclerAdapter.DisciplineHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val listDiscipline: MutableList<Discipline> = mutableListOf()
@@ -23,7 +26,7 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DisciplineHolder {
         val view = inflater.inflate(R.layout.view_discipline, parent, false)
-        return DisciplineHolder(view)
+        return DisciplineHolder(view, selectDisciplineListener)
     }
 
     override fun getItemCount(): Int {
@@ -34,7 +37,8 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
         holder.bind(listDiscipline[position])
     }
 
-    class DisciplineHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class DisciplineHolder(view: View, private val selectDisciplineListener: SelectDisciplineListener) :
+        RecyclerView.ViewHolder(view) {
 
         private val disciplineName: TextView = view.findViewById(R.id.discipline_name)
         private val professor: TextView = view.findViewById(R.id.professor_name)
@@ -43,6 +47,14 @@ class DisciplineRecyclerAdapter(context: Context) : RecyclerView.Adapter<Discipl
             disciplineName.text = discipline.name
             val majorProfessor = discipline.majorProfessor
             professor.text = "${majorProfessor.secondName} ${majorProfessor.firstName} ${majorProfessor.middleName}"
+
+            itemView.setOnClickListener {
+                selectDisciplineListener.OnDisciplineSelected(discipline)
+            }
         }
+    }
+
+    interface SelectDisciplineListener {
+        fun OnDisciplineSelected(discipline: Discipline)
     }
 }

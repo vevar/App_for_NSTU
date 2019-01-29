@@ -48,7 +48,9 @@ class DisciplineViewModel @Inject constructor(
             }
 
             override fun onNext(list: List<Discipline>) {
-                mListDiscipline.value = list
+                mListDiscipline.value = list.sortedBy {
+                    it.name
+                }
             }
 
             override fun onError(e: Throwable) {

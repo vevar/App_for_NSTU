@@ -54,6 +54,7 @@ class DisciplineCloudDataSource @Inject constructor(
             disciplineDTO
         }
         return Maybe.just(list)
+//        return Maybe.error(NumberFormatException())
     }
 
 }

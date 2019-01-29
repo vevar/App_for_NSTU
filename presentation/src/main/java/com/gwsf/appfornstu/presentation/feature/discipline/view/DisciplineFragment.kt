@@ -56,30 +56,20 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
 
         mBinding = DataBindingUtil
             .inflate(inflater, R.layout.discipline_list_fragment, container, false)
-        mDisciplineAdapter = DisciplineRecyclerAdapter(this.context!!)
+
+        mDisciplineAdapter = DisciplineRecyclerAdapter(
+            this.context!!,
+            object : DisciplineRecyclerAdapter.SelectDisciplineListener {
+                override fun OnDisciplineSelected(discipline: Discipline) {
+                    //TODO Here star activity
+                }
+
+            })
+
         mBinding.recyclerDisciplines.adapter = mDisciplineAdapter
         mBinding.recyclerDisciplines.layoutManager = LinearLayoutManager(this.context)
 
-        mBinding.searchEditText.setOnFocusChangeListener { v, hasFocus ->
-            val editText = v as EditText
-            if (hasFocus) {
-                editText.hint = ""
-            } else {
-                editText.hint = this.resources.getString(R.string.search_discipline)
-            }
-        }
-
-        mBinding.searchEditText.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-                mViewModel.mSearchedDiscipline.value = s.toString()
-            }
-        })
+        initSearchField()
 
 
         return mBinding.root
@@ -112,5 +102,28 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
     override fun hideProgressBar() {
         mBinding.progressBar.visibility = ProgressBar.GONE
         mBinding.recyclerDisciplines.visibility = RecyclerView.VISIBLE
+    }
+
+    private fun initSearchField() {
+        mBinding.searchEditText.setOnFocusChangeListener { v, hasFocus ->
+            val editText = v as EditText
+            if (hasFocus) {
+                editText.hint = ""
+            } else {
+                editText.hint = this.resources.getString(R.string.search_discipline)
+            }
+        }
+
+        mBinding.searchEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                mViewModel.mSearchedDiscipline.value = s.toString()
+            }
+        })
     }
 }
