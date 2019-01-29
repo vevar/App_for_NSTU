@@ -21,7 +21,7 @@ ext {
     // Defines a user-friendly version name for your app.
     androidVersionName = "1.0"
 //Libraries
-    domainVersion = 'event_rating-SNAPSHOT'
+    domainVersion = '389f404882'
 
     daggerVersion = '2.15'
     gsonVersion = '2.8.5'

@@ -15,7 +15,18 @@ class DisciplineMapper {
 
         fun convert(disciplineDTO: DisciplineDTO)
                 : Discipline {
-            return Discipline(
+            val discipline = Discipline(
+                disciplineDTO.id,
+                disciplineDTO.name
+            )
+
+            discipline.majorProfessor = ProfessorMapper.convert(disciplineDTO.mainProfessorDTO)
+
+            return discipline
+        }
+
+        fun convertToEntity(disciplineDTO: DisciplineDTO): DisciplineEntity {
+            return DisciplineEntity(
                 disciplineDTO.id,
                 disciplineDTO.name
             )

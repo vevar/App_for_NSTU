@@ -1,5 +1,6 @@
 package com.gwsf.appfornstu.presentation.internal.di.module
 
+import android.content.Context
 import com.gwsf.appfornstu.data.repository.factory.datasource.DisciplineDataSource
 import com.gwsf.appfornstu.data.repository.factory.datasource.base.DisciplineBaseDataSource
 import com.gwsf.appfornstu.data.repository.factory.datasource.base.dao.DisciplineDao
@@ -10,7 +11,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
-class DataSourceModule(private val disciplineDao: DisciplineDao) {
+class DataSourceModule(private val disciplineDao: DisciplineDao, private val context: Context) {
 
     companion object {
         const val TYPE_NAME_BASE = "Base"
@@ -28,7 +29,7 @@ class DataSourceModule(private val disciplineDao: DisciplineDao) {
     @Named(TYPE_NAME_CLOUD)
     @Singleton
     fun provideDisciplineDateSource(): DisciplineDataSource {
-        return DisciplineCloudDataSource()
+        return DisciplineCloudDataSource(context)
     }
 
 }

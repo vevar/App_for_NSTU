@@ -1,9 +1,12 @@
 package com.gwsf.appfornstu.presentation.feature.discipline.view
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -53,10 +56,31 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
 
         mBinding = DataBindingUtil
             .inflate(inflater, R.layout.discipline_list_fragment, container, false)
-
         mDisciplineAdapter = DisciplineRecyclerAdapter(this.context!!)
         mBinding.recyclerDisciplines.adapter = mDisciplineAdapter
         mBinding.recyclerDisciplines.layoutManager = LinearLayoutManager(this.context)
+
+        mBinding.searchEditText.setOnFocusChangeListener { v, hasFocus ->
+            val editText = v as EditText
+            if (hasFocus) {
+                editText.hint = ""
+            } else {
+                editText.hint = this.resources.getString(R.string.search_discipline)
+            }
+        }
+
+        mBinding.searchEditText.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                mViewModel.mSearchedDiscipline.value = s.toString()
+            }
+        })
+
 
         return mBinding.root
     }
@@ -71,13 +95,13 @@ class DisciplineFragment : BaseFragment(), DisciplineView {
     override fun onResume() {
         super.onResume()
 
-        mViewModel.listDiscipline.observe(this, mListDisciplineObserver)
+        mViewModel.mVisibleListDiscipline.observe(this, mListDisciplineObserver)
     }
 
     override fun onPause() {
         super.onPause()
 
-        mViewModel.listDiscipline.removeObserver(mListDisciplineObserver)
+        mViewModel.mVisibleListDiscipline.removeObserver(mListDisciplineObserver)
     }
 
     override fun showProgressBar() {

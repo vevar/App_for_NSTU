@@ -4,6 +4,9 @@ import com.gwsf.appfornstu.data.repository.factory.datasource.DisciplineDataSour
 import com.gwsf.appfornstu.data.util.mapper.DisciplineMapper
 import com.gwsf.domain.model.discipline.Discipline
 import com.gwsf.domain.repository.concrete.DisciplineRepository
+import io.reactivex.Flowable
+import io.reactivex.Maybe
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Named
@@ -21,17 +24,17 @@ class DisciplineRepositoryBC @Inject constructor(
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun findListDisciplinesByUserId(userId: Int): Single<List<Discipline>> {
-        return disciplineBaseDataSource.get().getListDisciplinesByUserId(userId)
-            .map {
-                it.map { disciplineDTO ->
-                    DisciplineMapper.convert(disciplineDTO)
-                }
-            }.doOnComplete {
-                disciplineCloudDataSource.get().getListDisciplinesByUserId(userId)
-                    .doOnSuccess {
-                        //TODO Save
-                    }
-            }.toSingle()
+    override fun findListDisciplinesByUserId(userId: Int): Observable<List<Discipline>> {
+        val base = disciplineBaseDataSource.get().getListDisciplinesByUserId(userId)
+        val cloud = disciplineCloudDataSource.get().getListDisciplinesByUserId(userId)
+            .doOnSuccess { list ->
+                disciplineBaseDataSource.get().postListDisciplines(list)
+            }
+
+        return Observable.merge(base.toObservable(),cloud.toObservable()).map {
+            it.map { disciplineDTO ->
+                DisciplineMapper.convert(disciplineDTO)
+            }
+        }
     }
 }

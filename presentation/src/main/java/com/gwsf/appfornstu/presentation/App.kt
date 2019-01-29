@@ -8,6 +8,7 @@ import com.gwsf.appfornstu.presentation.internal.di.component.AppComponent
 import com.gwsf.appfornstu.presentation.internal.di.component.DaggerAppComponent
 import com.gwsf.appfornstu.presentation.internal.di.component.DaggerScreenComponent
 import com.gwsf.appfornstu.presentation.internal.di.component.ScreenComponent
+import com.gwsf.appfornstu.presentation.internal.di.module.DataSourceModule
 import com.gwsf.appfornstu.presentation.internal.di.module.EnvironmentModule
 import com.gwsf.appfornstu.presentation.internal.di.module.RepositoryModule
 
@@ -51,6 +52,7 @@ class App : Application() {
         this.applicationComponent = DaggerAppComponent.builder()
             .environmentModule(EnvironmentModule(this))
             .repositoryModule(RepositoryModule())
+            .dataSourceModule(DataSourceModule(App.getApp(this).dataBase.getDisciplineDao(), this))
             .build()
 
         this.screenComponent = DaggerScreenComponent.builder()

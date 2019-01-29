@@ -18,7 +18,10 @@
 
         </activity>
 
-        <activity android:name="com.gwsf.appfornstu.presentation.feature.container.ContainerActivity">
+        <activity android:name="com.gwsf.appfornstu.presentation.feature.container.ContainerActivity"
+                  android:windowSoftInputMode="adjustPan">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
