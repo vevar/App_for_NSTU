@@ -1,21 +1,36 @@
+apply from: 'buildsystem/dependencies.gradle'
+
 buildscript {
-    ext.kotlin_version = '1.3.11'
     repositories {
         google()
         jcenter()
+        mavenCentral()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.20"
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha11"
     }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
+
+    ext {
+        androidApplicationId = 'com.gwsf.appfornstu'
+        androidTestInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
+
+        androidVDUseSupportLibrary = true
     }
+
+//    configurations {
+//        developDebug
+//        developRelease
+//        productionDebug
+//        productionRelease
+//    }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir

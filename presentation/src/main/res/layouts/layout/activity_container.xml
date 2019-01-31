@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <fragment
+                android:name="com.gwsf.appfornstu.presentation.feature.listdiscipline.view.ListDisciplinesFragment"
+                android:id="@+id/fragment_main_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+        </fragment>
+        <!--<LinearLayout-->
+                <!--android:id="@+id/linearLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--style="?android:attr/buttonBarStyle">-->
+            <!--<Space-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" android:layout_weight="1"/>-->
+            <!--<Button-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--style="?android:attr/buttonBarButtonStyle"/>-->
+            <!--<Space-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" android:layout_weight="1"/>-->
+            <!--<Button-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--style="?android:attr/buttonBarButtonStyle"/>-->
+            <!--<Space-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" android:layout_weight="1"/>-->
+
+            <!--<Button-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@drawable/ic_launcher_foreground"-->
+                    <!--style="?android:attr/buttonBarButtonStyle"/>-->
+            <!--<Space-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" android:layout_weight="1"/>-->
+        <!--</LinearLayout>-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

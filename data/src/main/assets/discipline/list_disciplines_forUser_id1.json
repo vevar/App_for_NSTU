@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Программирование",
+    "mainProfessor": {
+      "id": 1,
+      "firstName": "Иван",
+      "surName": "Иванов",
+      "middleName": "Иванович"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Операционные системы",
+    "mainProfessor": {
+      "id": 1,
+      "firstName": "Иван",
+      "surName": "Иванов",
+      "middleName": "Иванович"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Обработка сигнала",
+    "mainProfessor": {
+      "id": 1,
+      "firstName": "Иван",
+      "surName": "Иванов",
+      "middleName": "Иванович"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Физ-ра",
+    "mainProfessor": {
+      "id": 1,
+      "firstName": "Иван",
+      "surName": "Иванов",
+      "middleName": "Иванович"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Базы данных",
+    "mainProfessor": {
+      "id": 1,
+      "firstName": "Иван",
+      "surName": "Иванов",
+      "middleName": "Иванович"
+    }
+  }
+]
