@@ -62,7 +62,7 @@ class ListDisciplinesFragment : BaseFragment(), ListDisciplineView {
             .inflate(inflater, R.layout.fragment_list_discipline, container, false)
 
         mListDisciplineAdapter = ListDisciplineRecyclerAdapter(
-            this.context!!,
+            LayoutInflater.from(this.requireContext()),
             object : ListDisciplineRecyclerAdapter.SelectDisciplineListener {
                 override fun OnDisciplineSelected(discipline: Discipline) {
                     //TODO Here star activity
@@ -70,7 +70,7 @@ class ListDisciplinesFragment : BaseFragment(), ListDisciplineView {
             })
 
         mBinding.recyclerDisciplines.adapter = mListDisciplineAdapter
-        mBinding.recyclerDisciplines.layoutManager = LinearLayoutManager(this.context)
+        mBinding.recyclerDisciplines.layoutManager = LinearLayoutManager(this.requireContext())
 
         initSearchField()
 

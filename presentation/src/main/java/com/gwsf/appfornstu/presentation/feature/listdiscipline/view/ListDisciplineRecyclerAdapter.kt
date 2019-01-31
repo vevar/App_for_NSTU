@@ -1,6 +1,5 @@
 package com.gwsf.appfornstu.presentation.feature.listdiscipline.view
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gwsf.appfornstu.presentation.R
 import com.gwsf.domain.model.discipline.Discipline
 
+
 class ListDisciplineRecyclerAdapter(
-    context: Context,
+    private val inflater: LayoutInflater,
     private val selectDisciplineListener: SelectDisciplineListener
 ) : RecyclerView.Adapter<ListDisciplineRecyclerAdapter.DisciplineHolder>() {
 
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
     private val listDiscipline: MutableList<Discipline> = mutableListOf()
 
     fun setListDiscipline(listDiscipline: List<Discipline>) {
