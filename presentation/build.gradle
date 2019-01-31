@@ -6,6 +6,7 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     def globalConfiguration = rootProject.extensions.getByName('ext')
@@ -33,10 +34,9 @@ android {
     sourceSets {
         main {
             res.srcDirs = [
-                    "src/main/res/layouts/timetable",
                     "src/main/res/layouts/login",
-                    "src/main/res/layouts/lesson",
-                    "src/main/res/layouts/discipline",
+                    "src/main/res/layouts/listdisciplines",
+                    "src/main/res/layouts/listevents",
                     "src/main/res/layouts",
                     "src/main/res"
             ]
@@ -99,6 +99,8 @@ dependencies {
 //    Arch
     implementation presentationDependencies.lifeCycleExtention
     implementation presentationDependencies.lifeCycleViewModel
+    implementation presentationDependencies.navigationFragment
+    implementation presentationDependencies.navigationUI
 
 //    ReactiveX
     implementation presentationDependencies.rxJava
@@ -111,6 +113,7 @@ dependencies {
 //    Dagger
     implementation presentationDependencies.dagger
     kapt presentationDependencies.daggerCompiler
+
 
 //    Test
     testImplementation presentationTestDependencies.junit

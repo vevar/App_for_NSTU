@@ -15,4 +15,7 @@
     <!--ICON-->
     <color name="colorDone">#3c9421</color>
     <color name="colorNotDone">#ffffff</color>
+
+
+    <color name="colorLightBlue">#00C3FF</color>
 </resources>

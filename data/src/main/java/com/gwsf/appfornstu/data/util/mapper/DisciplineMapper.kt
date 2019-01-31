@@ -19,7 +19,6 @@ class DisciplineMapper {
                 disciplineDTO.id,
                 disciplineDTO.name
             )
-
             discipline.majorProfessor = ProfessorMapper.convert(disciplineDTO.mainProfessorDTO)
 
             return discipline
@@ -28,7 +27,8 @@ class DisciplineMapper {
         fun convertToEntity(disciplineDTO: DisciplineDTO): DisciplineEntity {
             return DisciplineEntity(
                 disciplineDTO.id,
-                disciplineDTO.name
+                disciplineDTO.name,
+                disciplineDTO.mainProfessorDTO.id
             )
         }
     }

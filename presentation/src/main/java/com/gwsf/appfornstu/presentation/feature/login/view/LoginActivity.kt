@@ -9,12 +9,12 @@ import androidx.lifecycle.ViewModelProviders
 import com.gwsf.appfornstu.presentation.R
 import com.gwsf.appfornstu.presentation.databinding.ActivityLoginBinding
 import com.gwsf.appfornstu.presentation.feature.BaseActivity
+import com.gwsf.appfornstu.presentation.feature.container.ContainerActivity
 import com.gwsf.appfornstu.presentation.feature.login.vm.LoginViewModel
 import com.gwsf.appfornstu.presentation.feature.login.vm.LoginViewModelFactory
 
 
-class
-LoginActivity : BaseActivity<LoginView>(), LoginView {
+class LoginActivity : BaseActivity<LoginView>(), LoginView {
 
     companion object {
         private const val STATE_LOGIN = "login"
@@ -52,9 +52,11 @@ LoginActivity : BaseActivity<LoginView>(), LoginView {
                 mBinding.buttonLogin.isEnabled = false
                 mLoginModel.isInputDataCorrect.value = true
 
-                if (mLoginModel.userModel != null) {
-                    TODO()
-//                    ContainerActivity.startActivityDayTimeTable(this@LoginActivity)
+                val userModel = mLoginModel.userModel
+                if (userModel != null) {
+                    ContainerActivity.startActivityContainer(
+                        this@LoginActivity, userModel.id, userModel.email
+                    )
                 } else {
                     mBinding.buttonLogin.isEnabled = true
                 }
@@ -140,7 +142,6 @@ LoginActivity : BaseActivity<LoginView>(), LoginView {
             putString(STATE_PASSWORD, mBinding.editTextPassword.text.toString())
         }
     }
-
 
 
     override fun showProgressBar() {

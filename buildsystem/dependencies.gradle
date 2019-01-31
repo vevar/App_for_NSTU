@@ -21,7 +21,7 @@ ext {
     // Defines a user-friendly version name for your app.
     androidVersionName = "1.0"
 //Libraries
-    domainVersion = '389f404882'
+    domainVersion = '0b4c1a77f6'
 
     daggerVersion = '2.15'
     gsonVersion = '2.8.5'
@@ -34,6 +34,7 @@ ext {
     rxAndroidVersion = '2.1.0'
 
     lifeCycleVersion = '2.1.0-alpha01'
+    nav_version = "1.0.0-alpha11"
 
     recyclerViewVersion = '1.1.0-alpha01'
     cardViewVersion = '1.0.0'
@@ -50,13 +51,12 @@ ext {
 //Development
 //    ---
 
-
     presentationDependencies = [
             kotlinLib         : "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
             domain            : "com.github.GangstersWithSingleFinger:domain.nstuApp-Student-Rating:${domainVersion}",
-            roomRuntime          : "androidx.room:room-runtime:${roomVersion}",
-            roomCompiler         : "androidx.room:room-compiler:${roomVersion}",
-            roomRx               : "androidx.room:room-rxjava2:${roomVersion}",
+            roomRuntime       : "androidx.room:room-runtime:${roomVersion}",
+            roomCompiler      : "androidx.room:room-compiler:${roomVersion}",
+            roomRx            : "androidx.room:room-rxjava2:${roomVersion}",
             daggerCompiler    : "com.google.dagger:dagger-compiler:${daggerVersion}",
             dagger            : "com.google.dagger:dagger:${daggerVersion}",
             rxJava            : "io.reactivex.rxjava2:rxandroid:${rxJavaVersion}",
@@ -68,7 +68,9 @@ ext {
             appCompat         : "androidx.appcompat:appcompat:${appCompatVersion}",
             constraintLayout  : "androidx.constraintlayout:constraintlayout:${constraintLayout}",
             legacy            : "androidx.legacy:legacy-support-v4:${legacyVersion}",
-            material          : "com.google.android.material:material:${materialVersion}"
+            material          : "com.google.android.material:material:${materialVersion}",
+            navigationFragment: "android.arch.navigation:navigation-fragment:${nav_version}",
+            navigationUI      : "android.arch.navigation:navigation-ui:${nav_version}"
     ]
 
     presentationTestDependencies = [
@@ -92,6 +94,8 @@ ext {
             gson                 : "com.google.code.gson:gson:${gsonVersion}",
             daggerCompiler       : "com.google.dagger:dagger-compiler:${daggerVersion}",
             dagger               : "com.google.dagger:dagger:${daggerVersion}",
+            navigationFragment   : "android.arch.navigation:navigation-fragment:$nav_version",
+            navigationUI         : "android.arch.navigation:navigation-ui:$nav_version"
     ]
 
     dataTestDependencies = [

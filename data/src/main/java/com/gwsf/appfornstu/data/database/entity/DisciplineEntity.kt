@@ -9,8 +9,10 @@ data class DisciplineEntity(
     @PrimaryKey
     @ColumnInfo(name = "uid")
     val uid: Int,
-    val name: String
+    val name: String,
+    var idMainProfessor: Int
 ) {
+
     companion object {
         const val TABLE_NAME = "discipline"
     }
